@@ -1,0 +1,76 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\pagestyle{plain}
+\usepackage{graphicx}
+\usepackage[small]{caption}
+\usepackage{cite}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{authblk}
+\usepackage{url}
+\usepackage{hyperref}
+
+\pagenumbering{roman}
+%Insert your title and author list below
+\title{ePIC Exclusive, Diffractive and Tagging Analysis Note Template}
+\author[1]{L. Boi}
+
+\affil[1]{School of Bread, Seeds and Waterfowl, University of York, UK}
+
+\date{MONTH YEAR}
+
+\begin{document}
+
+\maketitle
+\begin{abstract}
+Abstract goes here
+\end{abstract}
+
+\pagebreak
+\tableofcontents
+
+\pagebreak
+\pagenumbering{arabic}
+
+\section{Introduction}\label{sec:Intro}
+
+Some background info to your channel. Brief overview of the physics interest in the channel.
+%Include figures etc as needed
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.3]{Figures/EPIC-longboi.png}
+    \caption{A re-imagined ePIC logo incorporating \href{https://www.york.ac.uk/about/history/long-boi/}{York's most famous duck.}}
+\label{fig:LBoi}
+\end{figure}
+
+\section{Simulation Overview}\label{sec:Sim_Overview}
+
+Details on the simulation, event generator used, detector geometry, beam conditions etc. Details on the relevant simulation campaign. Reference other sections via Sec.~\ref{sec:Intro} and cite things via \cite{jr:2022_YR}. Reference figures as Fig.~\ref{fig:LBoi}.
+
+\subsection{Event Generator Details}\label{subsec:EvGen}
+
+Information on event generator utilised.
+
+\section{Event Selection}\label{sec:EvSelect}
+
+Information on your event selection procedure/process. Highlight any specific subsystems used if relevant.
+
+\subsection{Analysis Code}\label{subsec:Analysis_Code}
+
+Information on where to find your analysis code, how to run it. Consider adding additional details to the appendix (weird compilation quirks etc).
+
+\section{Results and Discussion}\label{sec:Results_Discuss}
+
+Your results with key performance plots etc. Consult checklist of key figures, see \href{https://docs.google.com/presentation/d/1bqz9_GPvPoW4oz1m8KvzuUhPJZBe_CfU5APMt0LjfaU/edit?slide=id.g3338e3f4b69_0_51#slide=id.g3338e3f4b69_0_51}{page three of this presentation} as an example of plots to include.
+
+\pagebreak
+\appendix
+\section{Appendix}
+\input{Appendix}
+
+\bibliographystyle{elsarticle-num} 
+\bibliography{bibliography.bib}
+
+\end{document}
