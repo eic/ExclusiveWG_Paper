@@ -9,7 +9,7 @@ Directory structure is as follows -
 - Style_Files
   - A template ePIC style file to include in your analysis macro to format plots consistently
   - Add these lines to your macro
-    - #include "ePICStyle.h";
+    - #include "ePICStyle.C";
     - gROOT->ProcessLine("SetePICStyle()");
 - ROOT_Macros
   - Some root macros you might find useful for your analysis
