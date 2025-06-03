@@ -35,13 +35,14 @@ TStyle* ePICStyle()
 
   // set margin sizes
   ePICStyle->SetPadTopMargin(0.05);
-  ePICStyle->SetPadRightMargin(0.15);
+  ePICStyle->SetPadRightMargin(0.18);
   ePICStyle->SetPadBottomMargin(0.16);
   ePICStyle->SetPadLeftMargin(0.15);
 
   // set title offsets (for axis label)
   ePICStyle->SetTitleXOffset(1.4);
   ePICStyle->SetTitleYOffset(1.2);
+  ePICStyle->SetTitleOffset(1.2,"z"); // Set the offset for Z axis titles expliticly to avoid it being cut off
 
   // use large fonts
   //Int_t font=72; // Helvetica italics
@@ -86,7 +87,7 @@ TStyle* ePICStyle()
   ePICStyle->SetPadTickX(1);
   ePICStyle->SetPadTickY(1);
 
-  // legend modificatin
+  // legend modification
   ePICStyle->SetLegendBorderSize(0);
   ePICStyle->SetLegendFillColor(0);
   ePICStyle->SetLegendFont(font);
