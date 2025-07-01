@@ -16,3 +16,6 @@ Directory structure is as follows -
 - Analysis_Note_Template
   - A template .tex file for use in writing your analysis note
   - You can upload all of the included files directly to Overleaf etc if you want
+- Analysis_Notes
+  - Add folders with your analysis note here
+      - Raw .tex files, images OR just link to overleaf. Either is fine
