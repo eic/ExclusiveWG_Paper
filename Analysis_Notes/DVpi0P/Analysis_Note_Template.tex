@@ -69,7 +69,7 @@ To study the feasibility of the DV$\pi^{0}$P process at the EIC for $ep$ collisi
 
 \subsection{Event Generator - EpIC}\label{subsec:EvGen}
 % EpIC intro
-The EpIC\cite{Aschenauer:2022aeb, web_EpIC} is a state-of-the-art Monte Carlo event generator developed for the study of exclusive processes. It is built on the PARTONS platform\cite{Berthou:2015oaw, link_to_PARTONS}, which provides a modular and extensible software architecture, allowing for the integration of a wide range of theoretical models describing the partonic structure of the nucleon. EpIC currently supports a range of exclusive reactions, including Deeply Virtual Compton Scattering (DVCS), Time-like Compton Scattering (TCS), Deeply Virtual Meson Production (DVMP) with $\pi^{0}$, and Double Deeply Virtual Compton Scattering (DDVCS). It also features the implementation of radiative corrections. EpIC is well-suited for both the analysis of existing experimental data and for impact studies, particularly in the context of future experiments at EIC\cite{aschenauer2025studydeeplyvirtualcompton}.
+The EpIC~\cite{Aschenauer:2022aeb, web_EpIC} is a state-of-the-art Monte Carlo event generator developed for the study of exclusive processes. It is built on the PARTONS platform~\cite{Berthou:2015oaw, link_to_PARTONS}, which provides a modular and extensible software architecture, allowing for the integration of a wide range of theoretical models describing the partonic structure of the nucleon. EpIC currently supports a range of exclusive reactions, including Deeply Virtual Compton Scattering (DVCS), Time-like Compton Scattering (TCS), Deeply Virtual Meson Production (DVMP) with $\pi^{0}$, and Double Deeply Virtual Compton Scattering (DDVCS). It also features the implementation of radiative corrections. EpIC is well-suited for both the analysis of existing experimental data and for impact studies, particularly in the context of future experiments at EIC~\cite{aschenauer2025studydeeplyvirtualcompton}.
 
 % Generated kinematics
 DV$\pi^{0}$P events were generated within the following kinematic ranges:
@@ -172,7 +172,7 @@ Following electron selection, DIS kinematic variables were calculated, shown in 
 
 \subsection{Scattered Proton}\label{subsec:ScatteredProton}
 % Acceptance and quality cut
-For events in which the proton is detected in the B0 spectrometer, the \colorbox{lightgray}{ReconstructedTruthSeededChargedParticles} data collection was used. When the proton is detected in the RP detectors, the \colorbox{lightgray}{ForwardRomanPotRecParticles} data collection was employed for reconstruction. The left panel of Fig.~\ref{fig:protonacc} shows the detector acceptance for the scattered proton as a function of pseudo-rapidity, illustrating a gap in acceptance between the B0 and RP detector. The right panel displays the distribution of the squared momentum transfer, $t$, as accepted from the true protons. This distribution also reflects the acceptance gap between the two far-forward detectors. Fig.~\ref{fig:protonrec} shows the reconstructed momentum of the recoil proton and the corresponding $t$ distribution. It should be noted that these results include contributions from poorly reconstructed protons due to the use of static matrix reconstruction, and that no quality cuts have yet been applied. Consequently, there is a potential for improving the scattered proton selection with enhanced reconstruction methods and stricter quality criteria.
+For events in which the proton is detected in the B0 spectrometer, the \colorbox{lightgray}{ReconstructedTruthSeededChargedParticles} data collection was used. When the proton is detected in the RP detectors, the \colorbox{lightgray}{ForwardRomanPotRecParticles} data collection was employed for reconstruction. The left panel of Fig.~\ref{fig:protonacc} shows the detector acceptance for the scattered proton as a function of pseudo-rapidity, illustrating a gap in acceptance between the B0 and RP detector. The right panel displays the distribution of the squared momentum transfer, $t$, as accepted from the true protons. This distribution also reflects the acceptance gap between the two far-forward detectors. Fig.~\ref{fig:protonrec} shows the reconstructed momentum of the recoil proton and the corresponding $t$ distribution. It should be noted that these results include contributions from poorly reconstructed protons due to the use of static matrix reconstruction, and that angular acceptance quality cuts have been applied. For the B0 case, the reconstructed proton polar angle is required to be between 5.5 and 20~mrad, while for the RP case, it must lie between 0.0 and 5~mrad. Consequently, there is a potential for improving the scattered proton selection with enhanced reconstruction methods and stricter quality criteria.
 
 \begin{figure}[ht]
     \centering
@@ -213,7 +213,7 @@ The analysis code is currently under development and is located at:
 \end{verbatim}
 
 \section{Background Contribution to DVCS}\label{sec:Background}
-In the EIC Yellow Report, the minimum energy threshold for the forward electromagnetic calorimeter (EMCal) was set to 100MeV. At the request of the calorimeter group, a study was performed to evaluate the impact of increasing these thresholds to 200MeV in the pseudorapidity range $1.4 < \eta < 3.0$, and to 400~MeV in the range $3.0 < \eta < 3.5$. To assess the impact of these raised energy thresholds in the forward region, DV$\pi^{0}$P and DVCS event samples were generated, and a simplified study was conducted at the generator level. The effects were evaluated in terms of $\pi^{0}$ reconstruction efficiency and the resulting background contribution to DVCS measurements.
+In the EIC Yellow Report, the minimum energy threshold for the forward electromagnetic calorimeter (EMCal) was set to 100~MeV. At the request of the calorimeter group, a study was performed to evaluate the impact of increasing these thresholds to 200~MeV in the pseudorapidity range $1.4 < \eta < 3.0$, and to 400~MeV in the range $3.0 < \eta < 3.5$. To assess the impact of these raised energy thresholds in the forward region, DV$\pi^{0}$P and DVCS event samples were generated, and a simplified study was conducted at the generator level. The effects were evaluated in terms of $\pi^{0}$ reconstruction efficiency and the resulting background contribution to DVCS measurements.
 
 Fig.~\ref{fig:pi0_and_dvcs} shows the kinematic distributions of the two decay photons from $\pi^{0}$ in DV$\pi^{0}$P events and the single photon from DVCS events. The $\pi^{0}$ decay photons are predominantly produced in the forward region, while the DVCS photon is primarily distributed in the mid-rapidity region.
 
@@ -246,22 +246,20 @@ To estimate the background contribution, we integrate the distribution of these 
 
 \pagebreak
 \section{Results and Discussion}\label{sec:Results_Discuss}
-% t distribution
-[To Do] The distribution of the squared momentum transfer, $t$, will be shown after applying quality cuts on the reconstructed scattered proton.
+The analysis includes exclusivity cuts, requiring: (1) a well-identified scattered electron, selected using the $E/p$ criterion; (2) a well-reconstructed $\pi^{0}$, selected via the invariant mass window cut; (3) a well-identified scattered proton, selected using the angular acceptance criterion; and (4) full reconstruction of all final-state particles.
 
-\begin{figure}[ht]
+\begin{figure}[hb]
     \centering
-    \includegraphics[width=0.2\textwidth]{Figures/t_distribution_corrected.pdf}
-    \caption{[placeholder] Differential cross-section for momentum transfer $t$.}
+    \includegraphics[width=0.5\textwidth]{Figures/t_distribution_corrected_sigma.pdf}
+    \caption{The differential cross-section as a function of momentum transfer, $t$, integrated over $x$ and $Q^{2}$, has been corrected for detector acceptance and efficiency effects.}
 \label{fig:tdist}
 \end{figure}
 
+% t distribution
+The distribution of the squared momentum transfer, $t$, is shown after applying quality cuts, including the exclusivity requirement. It has been corrected for detector acceptance and efficiency, and normalized by the luminosity.
+
 % phi distribution
-To perform a feasibility study of the longitudinal single-target spin asymmetry, the $\phi$-distribution of the reconstructed $\pi^{0}$ was obtained, integrated over $t$, $x$, and $Q^{2}$. The resulting distribution is shown in Fig.~\ref{fig:phidist}. It has been corrected for detector acceptance, efficiency effects, and the crossing angle, while beam effects remain uncorrected. A fit using a $\sin(2\phi)$ functional form was applied to extract the amplitude of the asymmetry.
-
-The analysis includes exclusivity cuts, requiring: (1) a well-identified scattered electron, selected using the $E/p$ criterion; (2) a well-reconstructed $\pi^{0}$, selected via the invariant mass window cut; and (3) full reconstruction of all final-state particles. The current DV$\pi^{0}$P sample is unpolarized, and, as expected, the extracted asymmetry amplitude is consistent with zero within 1$\sigma$ uncertainty.
-
-The next step is to analyze a polarized proton DV$\pi^{0}$P sample in order to compare asymmetry amplitudes and assess the sensitivity of the measurement.
+To perform a feasibility study of the longitudinal single-target spin asymmetry, the $\phi$-distribution of the reconstructed $\pi^{0}$ was obtained, integrated over $t$, $x$, and $Q^{2}$. The resulting distribution is shown in Fig.~\ref{fig:phidist}. It has been corrected for detector acceptance, efficiency effects, and the crossing angle, while beam effects remain uncorrected. A fit using a $\sin(2\phi)$ functional form was applied to extract the amplitude of the asymmetry. The current DV$\pi^{0}$P sample is unpolarized, and, as expected, the extracted asymmetry amplitude is consistent with zero within 1$\sigma$ uncertainty. The next step is to analyze a polarized proton DV$\pi^{0}$P sample in order to compare asymmetry amplitudes and assess the sensitivity of the measurement.
 
 \begin{figure}[ht]
     \centering
