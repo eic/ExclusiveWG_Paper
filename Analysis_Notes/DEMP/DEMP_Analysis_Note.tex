@@ -108,9 +108,13 @@ Each stage has some cuts applied which are detailed below.
 
 \subsection{Event Selection - Identifying Charged Particles}\label{subsec:Charged_Parts}
 
-Due to the distribution of particles in DEMP $p(e,e'\pi^+n)$ events, selection of charged particles are very straightforward. \textcolor{red}{Change this to the electron finder when implemented! SJDK 21/07/25}. The electron is identified by selecting a reconstructed charged particle track (i.e. within the ``ReconstructedChargedParticles'' branch of the EICrecon output) with a negative charge, with the track momentum in the $-z$ direction. There is also a requirement that this track has $\lvert \vec{P} \rvert$ greater than $80\%$ of the incident electron beam energy, $8~GeV/c$ in both beam energy combinations studied in this note. 
+Due to the distribution of particles in DEMP $p(e,e'\pi^+n)$ events, selection of charged particles are very straightforward. The method to identify the scattered electron is based upon the EIC electron finder \cite{eFinder}, but is coded in a different style. To identify the scattered electron, the analysis code searches for the highest energy cluster in the barrel electromagnetic calorimeter or the end cap (electron direction) electromagnetic calorimeter. Specifically, the branches ``EcalEndcapNClusters' and ``EcalBarrelClusters'' within EICrecon are searched. The code then checks that the energy of this cluster is $>0.8*E_{eBeam}$, if it is lower, the event is discarded. If the cluster is in the barrel, the code also checks that this cluster is in the negative $z$ side (electron going direction) of the calorimeter. Again, if this condition is not met, the event is discarded. This step is staggered such that first the end cap is checked for a good cluster, if none is found, the barrel is then searched.
 
-The pion is identified by selecting a reconstructed charged particle track with a positive charge and with the track momentum in the $+z$ direction. There is also a requirement that this track has $\lvert \vec{P} \rvert$ greater than $1~GeV/c$. This requirement is included to remove any low momentum noise/background events that may be present.
+If a ``good'' cluster is identified for an event, the code then checks the ``ReconstructedChargedParticles'' for a track. The code searches for a track with a negative charge, with the track momentum in the $-z$ direction. There is also a requirement that this track has $\lvert \vec{P} \rvert$ greater than $80\%$ of the incident electron beam energy, $8~GeV/c$ in both beam energy combinations studied in this note. Once a good track and good cluster have been identified, the code then calculates the momentum, $P$, from a combination of the track and cluster information. This is used to calculate an $E/P$ value for the track plus cluster combination. For real electron signals, this value should be close to $\sim1$. As such, a cut is applied on this value and only events with $0.8 < E/P < 1.2$ are retained. If this condition is passed, the track information \textbf{only} is assigned to the $e'$ for this event. Calorimeter information is only utilised to veto events and is not used in subsequent calculations.
+
+Note  that there is a gap in acceptance between the barrel and end cap calorimeters approximately between $160^{\circ} < \theta < 163^{\circ}$. If no calorimeter cluster is found matching the initial criteria, but a track that passes the selection cuts above is identified with $\theta$ in this range, the track information is assigned to the $e'$ for this event still. This is to compensate for the fact that due to the lack of calorimeter coverage in this region, we cannot expect to see a cluster for these tracks.
+
+Pion selection currently utilises a slightly simpler approach. The pion is identified by selecting a reconstructed charged particle track with a positive charge and with the track momentum in the $+z$ direction. There is also a requirement that this track has $\lvert \vec{P} \rvert$ greater than $1~GeV/c$. This requirement is included to remove any low momentum noise/background events that may be present.
 
 \subsection{Event Selection - Identifying Neutrons}\label{subsec:Neutrons}
 
@@ -161,14 +165,14 @@ Once calculated, a cut is applied on $-t$. Any events with\newline $0~<~-t_{eXBA
 To ensure exclusivity and remove background events, further cuts are needed. This DEMP analysis utilises a somewhat unique cut to achieve these objectives. To implement this cut, a missing momentum vector is determined from the reconstructed $e'$ and $\pi^{+}$ tracks -
 
 \begin{gather*}
-    \vec{P}_{Miss} = \left(\vec{e}+\vec{p}\right) - \left(\vec{e}\prime_{Rec} + \vec{\pi}_{Rec}\right)
+    \vec{P}_{nMiss} = \left(\vec{e}+\vec{p}\right) - \left(\vec{e}\prime_{Rec} + \vec{\pi}_{Rec}\right)
 \end{gather*}
 
-where $\vec{e}$ and $\vec{p}$ are the initial electron and proton beam 4-vectors. If this is an exclusive event, the resulting four vector should correspond to the neutron. The polar and azimuthal ($\theta^{*}_{Miss}$ and $\phi^{*}_{Miss}$ angles of this track (after rotation by $25~mRad$ to remove beam crossing effects) should correspond to the polar and azimuthal angles determined from the neutron hit on the ZDC ($\theta^{*}_{ZDC}$ and $\phi^{*}_{ZDC}$, again, after rotation by $25~mRad$). Two differences, $\Delta\theta^{*}a$ and $\Delta\phi^{*}i$ can then be defined and calculated as -
+where $\vec{e}$ and $\vec{p}$ are the initial electron and proton beam 4-vectors. If this is an exclusive event, the resulting four vector should correspond to the neutron, hence $P_{nMiss}$. The polar and azimuthal ($\theta^{*}_{nMiss}$ and $\phi^{*}_{nMiss}$) angles of this track (after rotation by $25~mRad$ to remove beam crossing effects) should correspond to the polar and azimuthal angles determined from the neutron hit on the ZDC ($\theta^{*}_{ZDC}$ and $\phi^{*}_{ZDC}$, again, after rotation by $25~mRad$). Two differences, $\Delta\theta^{*}a$ and $\Delta\phi^{*}i$ can then be defined and calculated as -
 
 \begin{gather*}
-    \Delta\theta^{*} = \theta^{*}_{pMiss} - \theta^{*}_{ZDC},\\
-    \Delta\phi^{*} = \phi^{*}_{PMiss} - \phi^{*}_{ZDC}.
+    \Delta\theta^{*} = \theta^{*}_{nMiss} - \theta^{*}_{ZDC},\\
+    \Delta\phi^{*} = \phi^{*}_{nMiss} - \phi^{*}_{ZDC}.
 \end{gather*}
 
 For exclusive events, these differences should be very small, particularly $\Delta\theta^{*}$ due to the excellent position resolution of the ZDC. As such, only events satisfying -
@@ -194,7 +198,24 @@ for 10x250 events are retained. These ranges were chosen to fit along lines of c
 \label{fig:10x130_DeltaCut}
 \end{figure}
 
-This cut is an indirect cut on the missing momentum and, as a consequence, the missing energy. As such, no additional cuts on the missing momentum or energy (which may be more typical of an exclusivity cut) are applied. The only other cut that is applied is a cut on the sum of $E-P_{z}$ for all detected final state particles. In the absence of initial state radiation or background events, this sum should be roughly equal to two times the electron beam energy ($20~GeV$ in each case under study here). As such, a cut of -
+This cut is an indirect cut on the missing momentum and, as a consequence, the missing energy. However, to further reduce any potential background events leaking in, a further, cirect cut on the missing momentum is applied. The missing momentum for the full DEMP system is calculated as -
+
+\begin{gather*}
+    \vec{P}_{M_DEMP} = \left(\vec{e}+\vec{p}\right) - \left(\vec{e}\prime_{Rec} + \vec{\pi}_{Rec} + \vec{n}_{Rec}\right)
+\end{gather*}
+
+Cuts are applied on the $.M2()$ and $.M()$ values of this 4-vector. Events with:
+
+\begin{gather*}
+	\vec{P}_{M_DEMP}.M2() < -1 \left(GeV/c^{2}\right)^{2},
+	\vec{P}_{M_DEMP}.M() > 0.75 GeV/c^{2},
+\end{gather*}
+
+are removed respectively. This is to account for the fact that for a true exclusive event, all particles in the event should be detected and as such, the ``missing'' mass should be $\approx0$.
+
+\textcolor{red}{Add figure with M2 and M distributions showing cuts.}
+
+Finally, a cut on the sum of $E-P_{z}$ for all detected final state particles is applied. In the absence of initial state radiation or background events, this sum should be roughly equal to two times the electron beam energy ($20~GeV$ in each case under study here). As such, a cut of -
 
 \begin{gather*}
     18 < \sum \left(E - P_{z}\right) < 22,
