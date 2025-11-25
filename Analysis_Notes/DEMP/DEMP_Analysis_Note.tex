@@ -20,8 +20,8 @@
 \author[1]{L. Preet}
 
 \affil[1]{Department of Physics, University of Regina, SK, S4S 0A2, Canada}
-\affil[2]{School of Physics, Engineering and Technology University of York, YO10 5DD, UK}
-\date{MONTH 2025}
+\affil[2]{School of Physics, Engineering and Technology, University of York, YO10 5DD, UK}
+\date{November 2025}
 
 \begin{document}
 
@@ -43,16 +43,39 @@ Abstract goes here
 
 \section{Introduction}\label{sec:Intro}
 
+\subsection{Scientific Motivation}
+Pions and kaons are among the most prominent strongly interacting particles next to the nucleon, since they are the Goldstone bosons of QCD. Thus, it is important to study their internal structure and how this reflects their Goldstone boson nature; a question particularly relevant for understanding the origin of mass generation in QCD.
 
-Pions and kaons are among the most prominent strongly interacting particles next to the nucleon, since they are the Goldstone bosons of QCD. Thus, it is important to study their internal structure and how this reflects their Goldstone boson nature; a question particularly relevant for understanding the origin of mass generation in QCD.  
+The hard contribution to the $\pi^+$ form factor can be calculated exactly within the framework of pQCD, and at asymptotically high $Q^2$ it takes a particularly simple form, $F_{\pi}(Q^2) \overrightarrow{_{Q^2 \rightarrow \infty}} 16 \pi \alpha_s(Q^2)f_{\pi}^2/Q^2$ \cite{PETERLEPAGE1979359}, where $f_{\pi}$ is the $\pi^+$ decay constant. In general, the pion also contains soft contributions, which are expected to dominate at lower $Q^2$. The actual behavior of $F_{\pi}$ as a function of $Q^2$, as QCD transitions smoothly from the non-perturbative (long-distance scale) confinement regime to the perturbative (short-distance scale) regime, is an important test of our understanding of QCD in bound hadron systems. Since QCD calculations cannot yet be performed rigorously in the confinement regime, experimental data from JLab play a vital role in validating the theoretical approaches employed. In particular, due to the charged pion's relatively simple quark-antiquark ($q\bar{q}$) valence structure and its experimental accessibility, the pion elastic form factor ($F_{\pi}$) offers our best hope of directly observing QCD's transition from color-confinement at long distance scales to asymptotic freedom at short distances. It is worth highlighting that in QCD the difference between the kaon and pion charge form factors is of the scale of 20\% at $Q^2 \sim$ 5 GeV$^2$~\cite{Gao:2017mmp} and disappears at asymptotic $Q^2$ as ln($Q^2$). Thus, the acquisition of experimental data for both form factors covering a wide $Q^2$ range should be a high priority.
 
-The hard contribution to the $\pi^+$ form factor can be calculated exactly within the framework of pQCD, and at asymptotically high $Q^2$ it takes a particularly simple form, $F_{\pi}(Q^2) \overrightarrow{_{Q^2 \rightarrow \infty}} 16 \pi \alpha_s(Q^2)f_{\pi}^2/Q^2$ \cite{PETERLEPAGE1979359}, where $f_{\pi}$ is the $\pi^+$ decay constant.  In general, the pion also contains soft contributions, which are expected to dominate at lower $Q^2$. The actual behavior of $F_{\pi}$ as a function of $Q^2$, as QCD transitions smoothly from the non-perturbative (long-distance scale) confinement regime to the perturbative (short-distance scale) regime, is an important test of our understanding of QCD in bound hadron systems. Since QCD calculations cannot yet be performed rigorously in the confinement regime, experimental data from JLab play a vital role in validating the theoretical approaches employed. In particular, due to the charged pion's relatively simple quark-antiquark ($q\bar{q}$) valence structure and its experimental accessibility, the pion elastic form factor ($F_{\pi}$) offers our best hope of directly observing QCD's transition from color-confinement at long distance scales to asymptotic freedom at short distances. It is worth highlighting that in QCD the difference between the kaon and pion charge form factors is of the scale of 20\% at $Q^2 \sim$ 5 GeV$^2$~\cite{Gao:2017mmp} and disappears at asymptotic $Q^2$ as ln($Q^2$).  Thus, the acquisition of experimental data for both form factors covering a wide $Q^2$ range should be a high priority.
+\subsection{Methodology}
 
-Current experimental information on the pion and kaon form factors is limited, particularly at large $Q^2$ \cite{Horn:2016rip}. Measurement of the $\pi^+$ electromagnetic form factor for $Q^2>0.3$ GeV$^2$ can be accomplished by the detection of the exclusive reaction $p(e,e'\pi^+)n$ at low $-t$. This is best described as quasi-elastic ($t$-channel) scattering of the electron from the virtual $\pi^+$ cloud of the proton, where $t=(p_{p}-p_{n})^2$ is the Mandelstam momentum transfer to the target nucleon. Scattering from the $\pi^+$ cloud dominates the longitudinal photon cross section ($d\sigma_L/dt$),  when $|t|\ll m_p^2$. To reduce background contributions, one preferably separates the components of the cross section due to longitudinal (L) and transverse (T) virtual photons (and the LT, TT interference contributions), via a Rosenbluth separation.  
+Current experimental information on the pion and kaon form factors is limited, particularly at large $Q^2$ \cite{Horn:2016rip}. Measurement of the $\pi^+$ electromagnetic form factor for $Q^2>0.3$ GeV$^2$ can be accomplished by the detection of the exclusive reaction $p(e,e'\pi^+)n$ at low $-t$. This is best described as quasi-elastic ($t$-channel) scattering of the electron from the virtual $\pi^+$ cloud of the proton, where $t=(p_{p}-p_{n})^2$ is the Mandelstam momentum transfer to the target nucleon. Scattering from the $\pi^+$ cloud dominates the longitudinal photon cross section ($d\sigma_L/dt$), when $|t|\ll m_p^2$. To reduce background contributions, one preferably separates the components of the cross section due to longitudinal ($L$) and transverse ($T$) virtual photons (and the $LT$, $TT$ interference contributions), via a Rosenbluth separation. 
+\begin{equation}
+  \label{eqn:sepsig}
+  \small{
+2\pi \frac{d^2 \sigma}{dt d\phi} = 
+   \epsilon \hspace{0.5mm} \frac{d\sigma_{\mathrm{L}}}{dt} +
+   \frac{d\sigma_{\mathrm{T}}}{dt} + \sqrt{2\epsilon (\epsilon +1)}
+   \hspace{1mm}\frac{d\sigma_{\mathrm{LT}}}{dt}
+   \cos{\phi}  
+   + \epsilon \hspace{0.5mm}
+   \frac{d\sigma_{\mathrm{TT}}}{dt} \hspace{0.5mm} \cos{2 \phi}},
+  \vspace{-2mm}
+\end{equation}
+where $d\sigma_L/dt$ ($d\sigma_T/dt$) are due to longitudinal (transverse) photons,
+$d\sigma_{LT}/dt$, $d\sigma_{TT}/dt$ are interference cross-sections, 
+$\epsilon=2(1-y)/(1+(1-y)^2)$ is the virtual-photon polarization parameter, $\phi$ is the azimuthal angle between the electron scattering and hadron reaction planes, and $y=Q^2/(x(s_{tot}-m_N^2))$ is the fractional energy loss. For convenience, we will refer to the left side of this equation as $\sigma_{uns}$, {\it i.e.} the unseparated cross section.
 
-A Rosenbluth separation involves the absolute subtraction of two measurements determined at high- and low-virtual photon polarization ($\epsilon_{Hi}$, $\epsilon_{Lo}$), corresponding to high and low electron beam energies, with very different detector rates. The resulting errors on $\sigma_L$ and $\sigma_T$ are magnified by $1/\delta\epsilon=(\epsilon_{Hi}-\epsilon_{Lo})^{-1}$. To keep the uncertainties in $\sigma_L$ to an acceptable level, $\delta\epsilon >0.2$ is typically required, {\it i.e.} an uncertainty magnification of no more than 5. The measurements require continuous, high intensity electron beams, and detectors with good particle identification and reproducible systematics. JLab Hall~C is currently the only facility worldwide capable of such studies.  
+A Rosenbluth separation involves the absolute subtraction of two measurements determined at high- and low-virtual photon polarization ($\epsilon_{Hi}$, $\epsilon_{Lo}$), corresponding to high and low electron beam energies, with very different detector rates. The resulting errors on $\sigma_L$ and $\sigma_T$ are magnified by $1/\Delta\epsilon=(\epsilon_{Hi}-\epsilon_{Lo})^{-1}$, i.e. there is no error cancellation. To keep the uncertainties in $\sigma_L$ to an acceptable level, $\Delta\epsilon >0.2$ is typically required, {\it i.e.} an uncertainty magnification of no more than 500\%. The measurements require continuous, high intensity electron beams, and detectors with good particle identification and reproducible systematics. JLab Hall~C is currently the only facility worldwide capable of such studies. 
 
-At the EIC, $\pi^+$ form factor measurements can be extended to significantly larger $Q^2$ than possible at JLab.  We have written an exclusive $p(e,e'\pi^+n)$ event generator~\cite{DEMPgen} and performed detailed simulations to determine the feasibility of $F_{\pi}$ measurements at the EIC\@.  The key questions we have addressed include: 1) detector requirements to cleanly identify exclusive $e' \pi^+ n$ coincidences; 2) experimental acceptance and projected counting rates for such triple coincidences; 3) event reconstruction resolution requirements to reliably extract $F_{\pi}(Q^2)$ from $p(e,e'\pi^+n)$ data. Since the cross section falls rapidly as the distance from the pion pole $(t-m_{\pi}^2)$ is increased, this steep fall off needs to be measured to confirm the dominance of the pion cloud mechanism in the acquired data. This note describes our work addressing all of these questions and evaluating what can be achieved with the EIC in its first five years of running.
+Accessing $\epsilon<$0.8 requires $y>0.5$, which can only occur if $s_{tot}$ is small. For the EIC, this implies low proton collider energies (5-15 GeV), which is well outside the collider design range. Thus, a conventional $L/T$-separation is impractical at the EIC, and some other way is needed to identify $d\sigma_L/dt$. An alternate approach to reliably estimate $\sigma_L$ from the measured unseparated cross-sections with the aid of a theoretical model is discussed in Sec. \ref{sec:sigL_isolation}.
+
+Once $d\sigma_L/dt$ over a range of $-t_{min}<t<0.3$ GeV$^2$ has either been measured directly (JLab) or reliably determined (EIC), the value of $F_{\pi}(Q^2)$ is determined by comparing the $d\sigma_L/dt$ values to the best available electroproduction model of the $ep\rightarrow e'\pi^+n$ reaction. This model must incorporate the effects of the recoil nucleon, the off-shell effects of the struck virtual pion in the scattering process, and the contributions of non-pole processes at the measured $(Q^2, W, t)$, where $W^2=(p_{\pi^+}+p_{n})^2$. The model must also have the pion form factor as an adjustable parameter, so that the best-fit value and its uncertainty at fixed $(Q^2, W)$ are obtained by comparison of the magnitude and $t$-dependencies of the model and data. If several models are available, the form factor values obtained with each one can be compared to better understand the model dependence. To date, three models meeting our criteria are available \cite{Perry:2020hli,Choi:2015yia,Vanderhaeghen:1997ts}. The obtained $F_{\pi}$ values are in principle dependent upon the model used, but one anticipates this dependence to be reduced at sufficiently small $-t$.
+
+\subsection{Importance of EIC measurements}
+
+At the EIC, $\pi^+$ form factor measurements can be extended to significantly larger $Q^2$ than possible at JLab. We have written an exclusive $p(e,e'\pi^+n)$ event generator~\cite{DEMPgen} and performed detailed simulations to determine the feasibility of $F_{\pi}$ measurements at the EIC\@. The key questions we have addressed include: 1) detector requirements to cleanly identify exclusive $e' \pi^+ n$ coincidences; 2) experimental acceptance and projected counting rates for such triple coincidences; 3) event reconstruction resolution requirements to reliably extract $F_{\pi}(Q^2)$ from $p(e,e'\pi^+n)$ data. Since the cross section falls rapidly as the distance from the pion pole $(t-m_{\pi}^2)$ is increased, this steep fall off needs to be measured to confirm the dominance of the pion cloud mechanism in the acquired data, and the treatment of this in the model. This note describes our work addressing these questions and our evaluation of what can be achieved with the EIC in its first five years of running.
 
 \section{Simulation Overview}\label{sec:Sim_Overview}
 
@@ -60,160 +83,166 @@ The analysis presented in this note utilises our event generator, DEMPgen \cite{
 
 \subsection{Event Generator Details}\label{subsec:EvGen}
 
-\href{https://github.com/JeffersonLab/DEMPgen/releases}{DEMPgen version 1.2.4}\footnote{\url{https://github.com/JeffersonLab/DEMPgen/releases}} was utilised to generate $p(e,e'\pi^+n)$ events for this study. DEMPgen events are absolutely-normalized so that project event rates can easily be predicted. This normalization is maintained in the form of an event weighting which is retained through the simulation and reconstruction chain before being applied to final results. Two different early science configurations were studied, namely $10$~GeV electron on $130$~GeV (10x130) proton and $10$~GeV electron on $250$~GeV proton (10x250) collisions. Events were generated over the following kinematic range:
-
+\href{https://github.com/JeffersonLab/DEMPgen/releases}{DEMPgen version 1.2.4}\footnote{\url{https://github.com/JeffersonLab/DEMPgen/releases}} was utilised to generate $p(e,e'\pi^+n)$ events for this study. DEMPgen events are absolutely-normalized so that project event rates can easily be predicted. This normalization is maintained in the form of an event weighting which is retained through the simulation and reconstruction chain before being applied to final results. Two different early science configurations were studied, namely $10$~GeV electron on $130$~GeV ($10\times 130$) proton and $10$~GeV electron on $250$~GeV proton ($10\times 250$) collisions. Events were generated over the following kinematic range:
 \begin{itemize}
-    \item $5~<~Q^{2}~<~35$
-    \item $-t~<0.45$
-    \item $2~<~W~<~10.2$
+    \item $5~<~Q^{2}~<~35$ GeV$^2$
+    \item $-t~<0.45$ GeV$^2$
+    \item $2~<~W~<~10.2$ GeV
 \end{itemize}
 
 For each beam energy, events were generated in three distinct $Q^{2}$ ranges to ensure adequate simulated statistics in each region. These three regions were:
-
 \begin{itemize}
-    \item $5~<~Q^{2}~<~10$
-    \item $10~<~Q^{2}~<~20$
-    \item $20~<~Q^{2}~<~35$
+    \item $5~<~Q^{2}~<~10$ GeV$^2$
+    \item $10~<~Q^{2}~<~20$ GeV$^2$
+    \item $20~<~Q^{2}~<~35$ GeV$^2$
 \end{itemize}
 
-Four hundred thousand events were generated in each $Q^{2}$ range for each beam energy combination. Each $Q^{2}$ region was selected by imposing a cut on the generation range of scattered electron energies when running the event generator. The resulting output hepmc3 files produced by the generator were processed through the EIC afterburner \cite{Afterburner} to apply beam effects. The resulting files were then passed to the ePIC production working group for processing as part of monthly simulation campaigns. Details on how to reproduce the files provided to the production working group, including all simulation input .json cards, can be found \href{https://github.com/JeffersonLab/DEMPgen/tree/develop/Jul2025_ePIC_Simulation_Campaign}{here.}\footnote{\url{https://github.com/JeffersonLab/DEMPgen/tree/develop/Jul2025_ePIC_Simulation_Campaign}}.
+Four hundred thousand events were generated in each $Q^{2}$ range for each beam energy combination. Each $Q^{2}$ region was selected by imposing a cut on the generation range of scattered electron energies when running the event generator. The resulting output hepmc3 files produced by the generator were processed through the EIC afterburner \cite{Afterburner} to apply beam effects. The resulting files were then passed to the ePIC production working group for processing as part of monthly simulation campaigns. Details on how to reproduce the files provided to the production working group, including all simulation input .json cards, can be found \href{https://github.com/JeffersonLab/DEMPgen/tree/develop/Jul2025_ePIC_Simulation_Campaign}{here.}\footnote{\url{https://github.com/JeffersonLab/DEMPgen/tree/develop/Jul2025_ePIC_Simulation_Campaign}}. The plots presented in subsequent sections show output from the 25.10.2 simulation campaign.
 
 \section{Event Selection}\label{sec:EvSelect}
 
-DEMP $p(e,e'\pi^+n)$ events have very well defined kinematics. The scattered electron, $e'$ and produced meson, $\pi^{+}$, are detected by the electron or hadron end caps respectively in most cases, with some events ending up in the central barrel. The neutrons carry the majority of the initial proton beam momentum and as such, are detected in the far forward detectors, primarily the ZDC. The distribution of events for 10x130 and 10x250 events can be seen in Figs.~\ref{fig:10x130_TruthKin} and \ref{fig:10x250_TruthKin} below.
+DEMP $p(e,e'\pi^+n)$ events have very well defined kinematics. The scattered electron, $e'$ and produced meson, $\pi^{+}$, are detected by the electron or hadron end caps respectively in most cases, with some events ending up in the central barrel. The neutrons carry the majority of the initial proton beam momentum and as such, are detected in the far forward detectors, primarily the ZDC. The distribution of events for $10\times 130$ and $10\times 250$ events can be seen in Figs.~\ref{fig:10x130_TruthKin} and \ref{fig:10x250_TruthKin} below.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{Figures/10on130_PiDEMP_Truth.png}
-    \caption{Momentum and polar angle ($\theta$ distribution of scattered electrons, $e'$, pions, $\pi^{+}$ and neutrons, $n$ for 10x130 events. Note that the $z$ scale is a rate in $Hz$ due to the absolute normalisation of DEMPgen.}
+    \caption{Momentum and polar angle ($\theta$ distribution of scattered electrons, $e'$, pions, $\pi^{+}$ and neutrons, $n$ for $10\times 130$ events. Note that the $z$ scale is a rate in $Hz$ due to the absolute normalisation of DEMPgen.}
 \label{fig:10x130_TruthKin}
 \end{figure}
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{Figures/10on250_PiDEMP_Truth.png}
-    \caption{Momentum and polar angle ($\theta$ distribution of scattered electrons, $e'$, pions, $\pi^{+}$ and neutrons, $n$ for 10x250 events. Note that the $z$ scale is a rate in $Hz$ due to the absolute normalisation of DEMPgen.}
+    \caption{Momentum and polar angle ($\theta$ distribution of scattered electrons, $e'$, pions, $\pi^{+}$ and neutrons, $n$ for $10\times 250$ events. Note that the $z$ scale is a rate in $Hz$ due to the absolute normalisation of DEMPgen.}
 \label{fig:10x250_TruthKin}
 \end{figure}
 
 This makes the event selection process relatively straightforward with a clearly defined sequence:
-
 \begin{enumerate}
     \item Identify charged particles ($e'$ and $\pi^{+}$)
     \item Identify neutrons incident on the ZDC
     \item Calculate kinematics
     \item Apply exclusivity and other cuts
 \end{enumerate}
-
 Each stage has some cuts applied which are detailed below.
 
-\subsection{Event Selection - Identifying Charged Particles}\label{subsec:Charged_Parts}
+
+\subsection{Identifying Charged Particles}\label{subsec:Charged_Parts}
 
 Due to the distribution of particles in DEMP $p(e,e'\pi^+n)$ events, selection of charged particles are very straightforward. The method to identify the scattered electron is based upon the EIC electron finder \cite{eFinder}, but is coded in a different style. To identify the scattered electron, the analysis code searches for the highest energy cluster in the barrel electromagnetic calorimeter or the end cap (electron direction) electromagnetic calorimeter. Specifically, the branches ``EcalEndcapNClusters' and ``EcalBarrelClusters'' within EICrecon are searched. The code then checks that the energy of this cluster is $>0.8*E_{eBeam}$, if it is lower, the event is discarded. If the cluster is in the barrel, the code also checks that this cluster is in the negative $z$ side (electron going direction) of the calorimeter. Again, if this condition is not met, the event is discarded. This step is staggered such that first the end cap is checked for a good cluster, if none is found, the barrel is then searched.
 
-If a ``good'' cluster is identified for an event, the code then checks the ``ReconstructedChargedParticles'' for a track. The code searches for a track with a negative charge, with the track momentum in the $-z$ direction. There is also a requirement that this track has $\lvert \vec{P} \rvert$ greater than $80\%$ of the incident electron beam energy, $8~GeV/c$ in both beam energy combinations studied in this note. Once a good track and good cluster have been identified, the code then calculates the momentum, $P$, from a combination of the track and cluster information. This is used to calculate an $E/P$ value for the track plus cluster combination. For real electron signals, this value should be close to $\sim1$. As such, a cut is applied on this value and only events with $0.8 < E/P < 1.2$ are retained. If this condition is passed, the track information \textbf{only} is assigned to the $e'$ for this event. Calorimeter information is only utilised to veto events and is not used in subsequent calculations.
+If a ``good'' cluster is identified for an event, the code then checks the ``ReconstructedChargedParticles'' for a track. The code searches for a track with a negative charge, with the track momentum in the $-z$ direction. There is also a requirement that this track has $\lvert \vec{P} \rvert$ greater than $80\%$ of the incident electron beam energy, $8~GeV/c$ in both beam energy combinations studied in this note. Once a good track and good cluster have been identified, the code then calculates the momentum, $P$, from a combination of the track and cluster information. This is used to calculate an $E/P$ value for the track plus cluster combination. For real electron signals, this value should be close to $\sim1$. As such, a cut is applied on this value and only events with $0.9 < E/P < 1.2$ are retained. If this condition is passed, the track information \textbf{only} is assigned to the $e'$ for this event. Calorimeter information is only utilised to veto events and is not used in subsequent calculations.
 
-Note  that there is a gap in acceptance between the barrel and end cap calorimeters approximately between $160^{\circ} < \theta < 163^{\circ}$. If no calorimeter cluster is found matching the initial criteria, but a track that passes the selection cuts above is identified with $\theta$ in this range, the track information is assigned to the $e'$ for this event still. This is to compensate for the fact that due to the lack of calorimeter coverage in this region, we cannot expect to see a cluster for these tracks.
+Note that due to an overlap between the barrel and backwards end cap electromagnetic calorimeters, there is a region of inefficiency for reconstructing $e'$ clusters approximately between $160^{\circ} < \theta < 163^{\circ}$. If no calorimeter cluster is found matching the initial criteria, but a track that passes the selection cuts above is identified with $\theta$ in this range, the track information is assigned to the $e'$ for this event still. This is to compensate for inefficiency of in the calorimeter coverage in this overlap region.
 
 Pion selection currently utilises a slightly simpler approach. The pion is identified by selecting a reconstructed charged particle track with a positive charge and with the track momentum in the $+z$ direction. There is also a requirement that this track has $\lvert \vec{P} \rvert$ greater than $1~GeV/c$. This requirement is included to remove any low momentum noise/background events that may be present.
 
-\subsection{Event Selection - Identifying Neutrons}\label{subsec:Neutrons}
+\subsection{Identifying Neutrons}\label{subsec:Neutrons}
 
-For the beam energy combinations studied, the neutron produced in this reaction is incident on, and detected in, the ZDC in almost all generated events. As such, neutron identification is straightforward. Neutrons are identified from the ``ReconstructedFarForwardZDCNeutrals'' EICrecon branch. To filter out events that are not incident upon the ZDC and to remove low energy events, cuts are implemented on $\theta^{*}$ and the reconstructed neutral particle energy. $\theta^{*}$ is the polar angle $\theta$ after a rotation of $25~mRad$ around the proton beam axis to remove the effect of the beam crossing angle. After this rotation, the ZDC is indeed, centred at roughly ``zero degrees''. A cut of $\theta^{*}<4~mRad$ is applied. To remove low energy hits, a cut-off of the neutral particle energy being greater than $40~GeV$ is applied for 10x130 events. For 10x250 events, this cut off is increased to $120~GeV$.
+For the beam energy combinations studied, the neutron produced in this reaction is incident on, and detected in, the ZDC in almost all generated events. As such, neutron identification is straightforward. Neutrons are identified from the ``ReconstructedFarForwardZDCNeutrals'' EICrecon branch. To filter out events that are not incident upon the ZDC and to remove low energy events, cuts are implemented on $\theta^{*}$ and the reconstructed neutral particle energy. $\theta^{*}$ is the polar angle $\theta$ after a rotation of 25~mRad around the proton beam axis to remove the effect of the beam crossing angle. After this rotation, the ZDC is indeed, centred at roughly ``zero degrees''. A cut of $\theta^{*}<4~mRad$ is applied. To remove low energy hits, a cut-off of the neutral particle energy being greater than 40~GeV is applied for $10\times 130$ events. For $10\times 250$ events, this cut off is increased to 120~GeV.
 
-\subsection{Event Selection - Calculate Kinematics}\label{subsec:Kinematic_Calcs}
+\subsection{Calculate Kinematics}\label{subsec:Kinematic_Calcs}
 
-Before calculating any kinematic quantities such as $Q^{2}$ and $-t$, the analysis code requires that a candidate $e'$, $\pi^{+}$ and $n$ that pass relevant selection cuts (as defined above) have been found in coincidence. If this condition is met, the code calculates $Q^{2}$, the negative four-momentum transfer squared at the electron vertex. $Q^{2}$ can be calculated using various different methods as discussed \href{https://agenda.infn.it/event/43344/contributions/253198/attachments/130672/194493/EIC_KinematicReconstruction.pdf}{here}\footnote{\url{https://agenda.infn.it/event/43344/contributions/253198/attachments/130672/194493/EIC_KinematicReconstruction.pdf}}. For the kinematic region under investigation in this study, the double angle, DA, method proved to be optimal as seen in Fig~.\ref{fig:Q2_Comp}. It is apparent that this calculation method closely matches the ``true'' value across the relevant $Q^{2}$ range (5 to 35) as seen in Fig.~\ref{fig:Q2DA_Comp}. Once calculated, a cut on $Q^{2}_{DA}$ being within 5 and 35 $(GeV/c)^{2}$ is applied.
+Before calculating any kinematic quantities such as $Q^{2}$ and $-t$, the analysis code requires that a candidate $e'$, $\pi^{+}$ and $n$ that pass relevant selection cuts (as defined above) have been found in coincidence. If this condition is met, the code calculates $Q^{2}$, the negative four-momentum transfer squared at the electron vertex. $Q^{2}$ can be calculated using various different methods as discussed \href{https://agenda.infn.it/event/43344/contributions/253198/attachments/130672/194493/EIC_KinematicReconstruction.pdf}{here}\footnote{\url{https://agenda.infn.it/event/43344/contributions/253198/attachments/130672/194493/EIC_KinematicReconstruction.pdf}}. For the kinematic region under investigation in this study, the double angle, DA, method proved to be optimal as seen in Fig~.\ref{fig:Q2_Comp}. It is apparent that this calculation method closely matches the ``true'' value across the relevant $Q^{2}$ range (5 to 35) as seen in Fig.~\ref{fig:Q2DA_Comp}. Once calculated, a cut on $Q^{2}_{DA}$ being within 5 and 35 GeV$^2$ is applied.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.475\textwidth]{Figures/10on130_Q2Comp.png}
     \includegraphics[width=0.475\textwidth]{Figures/10on250_Q2Comp.png}
-    \caption{A comparison of the resolution for calculated $Q^{2}$ values, defined as the deviation from the MC truth divided by the MC truth value and expressed as a percentage, for 10x130 (left) and 10x250 (right) event samples. $Q^{2}_{DA}$ is clearly the most accurate in both cases, note that it is clear that the JB method is not applicable in DEMP kinematics. The distribution for this extends beyond the range of the plot quite significantly.}
+    \caption{A comparison of the resolution for calculated $Q^{2}$ values, defined as the deviation from the MC truth divided by the MC truth value and expressed as a percentage, for $10\times 130$ (left) and $10\times 250$ (right) event samples. $Q^{2}_{DA}$ is clearly the most accurate in both cases, note that it is clear that the JB method is not applicable in DEMP kinematics. The distribution for this extends beyond the range of the plot quite significantly.}
 \label{fig:Q2_Comp}
 \end{figure}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.475\textwidth]{Figures/10on130_Q2DAComp.png}
-    \includegraphics[width=0.475\textwidth]{Figures/10on250_Q2DAComp.png}
-    \caption{A comparison of $Q^{2}_{DA}$ against the MC truth value of $Q^{2}$ for 10x130 (left) and 10x250 (right) event samples.}
+    \includegraphics[width=0.475\textwidth]{Figures/10on130_Q2_Comp_2D.png}
+    \includegraphics[width=0.475\textwidth]{Figures/10on250_Q2_Comp_2D.png}
+    \caption{A comparison of $Q^{2}_{DA}$ against the MC truth value of $Q^{2}$ for $10\times 130$ (left) and $10\times 250$ (right) event samples.}
 \label{fig:Q2DA_Comp}
 \end{figure}
 
-Once events outside the relevant $Q^{2}$ range are removed, further kinematic quantities are calculated. The squared four-momentum transfer between the initial ($p$) and final ($n$) hadron state, $-t$, is critical to determine accurately for DEMP studies. Measurements are needed at the lowest $-t$ possible in order to get as close to the pion pole as possible. As with $Q^{2}$, there are many ways to determine $-t$. These are defined in the $t$RECO convention document \textcolor{red}{need a link/reference/citation for this! If none, add relevant text for the calculation. Link to generic code etc.}. DEMP can utilise the $t_{eXBABE}$ method which exploits the exclusive nature of the reaction to ``correct'' the measured neutron track. This method outperforms any reconstruction methods as can be seen in Fig.~\ref{fig:t_Comp}. This determination of $-t$ also strongly correlates with the MC truth value of $-t$ as can be seen in Fig.~\ref{fig:teXBABE_Comp}.
+Once events outside the relevant $Q^{2}$ range are removed, further kinematic quantities are calculated. The squared four-momentum transfer between the initial ($p$) and final ($n$) hadron state, $-t$, is critical to determine accurately for DEMP studies. Measurements are needed at the lowest $-t$ possible in order to get as close to the pion pole as possible. As with $Q^{2}$, there are many ways to determine $-t$. These are defined in the $t$RECO convention document~\cite{t_RECO}. DEMP can utilise the $t_{eXBABE}$ method\cite{teXBABE_Calc} which exploits the exclusive nature of the reaction to ``correct'' the measured neutron track. This method outperforms any reconstruction methods as can be seen in Fig.~\ref{fig:t_Comp}. This determination of $-t$ also strongly correlates with the MC truth value of $-t$ as can be seen in Fig.~\ref{fig:teXBABE_Comp}.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.475\textwidth]{Figures/10on130_tComp.png}
     \includegraphics[width=0.475\textwidth]{Figures/10on250_tComp.png}
-    \caption{A comparison of the resolution for calculated $-t$ values, defined as the deviation from the MC truth divided by the MC truth value and expressed as a percentage, for 10x130 (left) and 10x250 (right) event samples. $t_{eXBABE}$ is clearly the most accurate determination in each case.}
+    \caption{A comparison of the resolution for calculated $-t$ values, defined as the deviation from the MC truth divided by the MC truth value and expressed as a percentage, for $10\times 130$ (left) and $10\times 250$ (right) event samples. $t_{eXBABE}$ is clearly the most accurate determination in each case.}
 \label{fig:t_Comp}
 \end{figure}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.475\textwidth]{Figures/10on130_tCompAlt_ZDC.png}
-    \includegraphics[width=0.475\textwidth]{Figures/10on250_tCompAlt_ZDC.png}
-    \caption{A comparison of $-t_{eXBABE}$ against the MC truth value of $-t$ for 10x130 (left) and 10x250 (right) event samples. \textcolor{red}{Need to update units.}}
+    \includegraphics[width=0.475\textwidth]{Figures/10on130_t_Comp_2D.png}
+    \includegraphics[width=0.475\textwidth]{Figures/10on250_t_Comp_2D.png}
+    \caption{A comparison of $-t_{eXBABE}$ against the MC truth value of $-t$ for $10\times 130$ (left) and $10\times 250$ (right) event samples.}
 \label{fig:teXBABE_Comp}
 \end{figure}
 
-Once calculated, a cut is applied on $-t$. Any events with\newline $0~<~-t_{eXBABE}~<~1.4~(GeV/c)^{2}$ are removed. A cut on $W~>~0~GeV$ is also applied with any events failing this selection being removed. These cuts are applied simultaneously in conjunction with other cuts that are described in Sec.~\ref{subsec:Exclusivity_Cuts}.
+Once calculated, a cut is applied on $-t$. Any events with\newline $0~<~-t_{eXBABE}~<$~1.4~GeV$^2$ are removed. A cut on $W~>~0$~GeV is also applied with any events failing this selection being removed. These cuts are applied simultaneously in conjunction with other cuts that are described in Sec.~\ref{subsec:Exclusivity_Cuts}.
 
 \subsection{Event Selection - Final Cuts}\label{subsec:Exclusivity_Cuts}
 
-To ensure exclusivity and remove background events, further cuts are needed. This DEMP analysis utilises a somewhat unique cut to achieve these objectives. To implement this cut, a missing momentum vector is determined from the reconstructed $e'$ and $\pi^{+}$ tracks -
-
+To ensure exclusivity and remove background events, further cuts are needed. This DEMP analysis utilises a somewhat unique cut to achieve these objectives. To implement this cut, a missing momentum 4-vector is determined from the reconstructed $e'$ and $\pi^{+}$ tracks 
 \begin{gather*}
-    \vec{P}_{nMiss} = \left(\vec{e}+\vec{p}\right) - \left(\vec{e}\prime_{Rec} + \vec{\pi}_{Rec}\right)
+    P_{Miss} = \left(e+p\right) - \left(e^{\prime}_{Rec} + \pi_{Rec}\right)
+\end{gather*}
+where $e$ and $p$ are the initial electron and proton beam 4-vectors, and $e^{\prime}_{Rec}$, $\pi_{Rec}$ are the scattered electron and pion 4-vectors. If this is an exclusive event, the resulting four vector should correspond to that of the neutron. The polar and azimuthal ($\theta^{*}_{Miss}$ and $\phi^{*}_{Miss}$ angles of this track, after rotation by 25~mRad to remove beam crossing effects) should correspond to the polar and azimuthal angles determined from the neutron hit on the ZDC ($\theta^{*}_{ZDC}$ and $\phi^{*}_{ZDC}$, again, after rotation by 25~mRad). Two differences, $\Delta\theta^{*}$ and $\Delta\phi^{*}$ can then be defined and calculated as 
+\begin{gather*}
+    \Delta\theta^{*} = \theta^{*}_{pMiss} - \theta^{*}_{ZDC},\\
+    \Delta\phi^{*} = \phi^{*}_{PMiss} - \phi^{*}_{ZDC}.
 \end{gather*}
 
-where $\vec{e}$ and $\vec{p}$ are the initial electron and proton beam 4-vectors. If this is an exclusive event, the resulting four vector should correspond to the neutron, hence $P_{nMiss}$. The polar and azimuthal ($\theta^{*}_{nMiss}$ and $\phi^{*}_{nMiss}$) angles of this track (after rotation by $25~mRad$ to remove beam crossing effects) should correspond to the polar and azimuthal angles determined from the neutron hit on the ZDC ($\theta^{*}_{ZDC}$ and $\phi^{*}_{ZDC}$, again, after rotation by $25~mRad$). Two differences, $\Delta\theta^{*}a$ and $\Delta\phi^{*}i$ can then be defined and calculated as -
-
-\begin{gather*}
-    \Delta\theta^{*} = \theta^{*}_{nMiss} - \theta^{*}_{ZDC},\\
-    \Delta\phi^{*} = \phi^{*}_{nMiss} - \phi^{*}_{ZDC}.
-\end{gather*}
-
-For exclusive events, these differences should be very small, particularly $\Delta\theta^{*}$ due to the excellent position resolution of the ZDC. As such, only events satisfying -
-
+For exclusive events, these differences should be very small, particularly $\Delta\theta^{*}$ due to the excellent position resolution of the ZDC. As such, only events satisfying 
 \begin{gather*}
     -0.09^{\circ} < \Delta\theta^{*} < 0.14^{\circ},\\
     -55^{\circ}< \Delta\phi^{*} < 55^{\circ},
 \end{gather*}
-
-for 10x130 events and
-
+for $10\times 130$ events and
 \begin{gather*}
     -0.07^{\circ} < \Delta\theta^{*} < 0.17^{\circ},\\
     -80^{\circ}< \Delta\phi^{*} < 80^{\circ},
 \end{gather*}
-
-for 10x250 events are retained. These ranges were chosen to fit along lines of constant rate in a plot of $\Delta\theta^{*}$ vs $\Delta\phi^{*}$, such as in Fig.\ref{fig:10x130_DeltaCut}, to ensure no variations across the acceptance of the ZDC. They were also chosen so as to be conservative as SIDIS or other background events, which should not reconstruct in this range, will be excluded. For non-exclusive events, the missing momentum vector should not correspond to a single particle and as such, $\Delta\theta^{*}$ and $\Delta\phi^{*}$ should be spread across a much broader range.
+for $10\times 250$ events are retained. These ranges were chosen to fit along lines of constant rate in a plot of $\Delta\theta^{*}$ vs $\Delta\phi^{*}$, such as in Fig.\ref{fig:DeltaCut}, to ensure no variations across the acceptance of the ZDC. They were also chosen so as to be conservative as SIDIS or other background events, which should not reconstruct in this range, will be excluded. For non-exclusive events, the missing momentum vector should not correspond to a single particle and as such, $\Delta\theta^{*}$ and $\Delta\phi^{*}$ should be spread across a much broader range.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{Figures/10x130_deltaTheta_deltaPhi_Cut.png}
-    \caption{$\Delta\theta^{*}$ vs $\Delta\phi^{*}$ for 10x130 events. Note that as only DEMP events are processed, the majority of events survive this cut. Cuts were chosen along lines of constant rate as the peak area of the distribution tails off, as indicated by the solid black lines showing the cut region.}
-\label{fig:10x130_DeltaCut}
+    \includegraphics[width=0.475\textwidth]{Figures/10on130_DeltaRotThetaRotPhi_NoCuts.png}
+    \includegraphics[width=0.475\textwidth]{Figures/10on250_DeltaRotThetaRotPhi_NoCuts.png}
+    \caption{$\Delta\theta^{*}$ vs $\Delta\phi^{*}$ for $10\times 130$ (left) and $10\times250$  (right) events. Note that as only DEMP events are processed, the majority of events survive this cut. Cuts were chosen along lines of constant rate as the peak area of the distribution tails off, as indicated by the dashed black lines showing the cut region. Events outside of the shape confined by these four lines are removed.}
+\label{fig:DeltaCut}
 \end{figure}
 
-This cut is an indirect cut on the missing momentum and, as a consequence, the missing energy. However, to further reduce any potential background events leaking in, a further, cirect cut on the missing momentum is applied. The missing momentum for the full DEMP system is calculated as -
+This cut is an indirect cut on the missing momentum and, as a consequence, the missing energy. However, to further reduce any potential background events leaking in, a further, direct cut on the missing momentum is applied. The missing momentum for the full DEMP system is calculated as -
 
 \begin{gather*}
-    \vec{P}_{M_DEMP} = \left(\vec{e}+\vec{p}\right) - \left(\vec{e}\prime_{Rec} + \vec{\pi}_{Rec} + \vec{n}_{Rec}\right)
+    \vec{P}_{M\_DEMP} = \left(\vec{e}+\vec{p}\right) - \left(\vec{e}\prime_{Rec} + \vec{\pi}_{Rec} + \vec{n}_{Rec}\right)
 \end{gather*}
 
 Cuts are applied on the $.M2()$ and $.M()$ values of this 4-vector. Events with:
 
 \begin{gather*}
-	\vec{P}_{M_DEMP}.M2() < -1 \left(GeV/c^{2}\right)^{2},
-	\vec{P}_{M_DEMP}.M() > 0.75 GeV/c^{2},
+	\vec{P}_{M\_DEMP}.M2() < -1 \left(GeV/c^{2}\right)^{2},
+	\vec{P}_{M\_DEMP}.M() > 0.75 GeV/c^{2},
 \end{gather*}
 
-are removed respectively. This is to account for the fact that for a true exclusive event, all particles in the event should be detected and as such, the ``missing'' mass should be $\approx0$.
+are removed respectively. This is to account for the fact that for a true exclusive event, all particles in the event should be detected and as such, the ``missing'' mass should be $\approx0$. These cuts are shown in Figs.~\ref{fig:MCut} and \ref{fig:M2Cut} respectively.
 
-\textcolor{red}{Add figure with M2 and M distributions showing cuts.}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.475\textwidth]{Figures/10on130_MissMass.png}
+    \includegraphics[width=0.475\textwidth]{Figures/10on250_MissMass.png}
+    \caption{The $\vec{P}_{M\_DEMP}.M()$ distribution for $10\times 130$ (left) and $10\times250$ (right) events. Events with $\vec{P}_{M\_DEMP}.M() > 0.75 GeV/c^{2}$, anything to the right of the dashed red line in each figure, are removed.}
+\label{fig:MCut}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.475\textwidth]{Figures/10on130_MissMass2.png}
+    \includegraphics[width=0.475\textwidth]{Figures/10on250_MissMass2.png}
+    \caption{The $\vec{P}_{M\_DEMP}.M2()$ distribution for $10\times 130$ (left) and $10\times250$ (right) events. Events with $\vec{P}_{M\_DEMP}.M2() < -1 \left(GeV/c^{2}\right)^{2}$, anything to the left of the dashed red line in each figure, are removed.}
+\label{fig:M2Cut}
+\end{figure}
 
 Finally, a cut on the sum of $E-P_{z}$ for all detected final state particles is applied. In the absence of initial state radiation or background events, this sum should be roughly equal to two times the electron beam energy ($20~GeV$ in each case under study here). As such, a cut of -
 
@@ -229,17 +258,187 @@ The analysis of processed DEMP events is via a standard ROOT/C++ based macro. Th
 
 \section{Results and Discussion}\label{sec:Results_Discuss}
 
-Your results with key performance plots etc. Consult checklist of key figures, see \href{https://docs.google.com/presentation/d/1bqz9_GPvPoW4oz1m8KvzuUhPJZBe_CfU5APMt0LjfaU/edit?slide=id.g3338e3f4b69_0_51#slide=id.g3338e3f4b69_0_51}{page three of this presentation} as an example of plots to include.
+\subsection{Statistical Uncertainties
+\label{sec:statistics}}
 
-Once triple-coincidence $p(e,e'\pi^+n)$ events are cleanly identified with ePIC, the value of $F_{\pi}(Q^2)$ is determined by comparing the measured $d\sigma/dt$ values at small $-t$ to the best available electroproduction model. The obtained $F_{\pi}$ values are in principle dependent upon the model used, but one anticipates this dependence to be reduced at sufficiently small $-t$. Measurements over a range of $-t$ are an essential part of the model validation process. The JLab 6\,GeV experiments were instrumental in establishing the reliability of this technique up to $Q^2=2.45$~GeV$^2$~\cite{Huber:2008id, Horn:2016rip, Horn:2007ug, Volmer:2000ek, Horn:2006tm, Tadevosyan:2007yd, Blok:2008jy, Huber:2014ius, Huber:2014kar}, and extensive further tests are planned as part of JLab experiment E12-19-006 \cite{E12-19-006}.
+For the purpose of the statistical uncertainties, our projections are for an integrated luminosity of 5.0$\times 10^{39}$/cm$^2$. For 10$\times$130 beam energy combination, an instantaneous luminosity of 2.53$\times 10^{32}$/cm$^2$/s corresponds to a running time of 1.9$\times 10^7$s (220 days) with 100\% data taking efficiency. The triple-coincidence $p(e,e'\pi^+n)$ events analyzed in the above manner were binned in $Q^2$ and $t$, with default bin widths of $\Delta Q^2$=1 GeV$^2$ and $\Delta t=0.02$ GeV$^2$. An example of the rates per bin for events in a low $Q^{2}$ bin can be seen in Fig.~\ref{fig:tQ2_Bins}. This bin was applied to all except the highest $Q^2$ data, where the $Q^2$-bin width was widened to provide sufficient statistics in those bins.
 
-{\bf GH can add more discussion later.}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.475\textwidth]{Figures/10on130_tResult_Q2_5_6.png}
+    \includegraphics[width=0.475\textwidth]{Figures/10on250_tResult_Q2_5_6.png}
+    \caption{The rates per $0.02~GeV^{2}$ -t bin for $10\times 130$ (left) and $10\times250$ (right) events in the $5~GeV/c^{2}< Q^{2} < 6~GeV/c^{2}$ bin.}
+\label{fig:tQ2_Bins}
+\end{figure}
 
-\pagebreak
+It is vital that the $(Q^2,t)$-binning be at least as wide as the $t$ reconstruction resolutions shown in Figs. \ref{fig:Q2DA_Comp}, \ref{fig:teXBABE_Comp}, as significant bin migration will significantly hamper the theoretical interpretation of the results. This is unlikely to be an issue for $Q^{2}$ as the resolution varies from $\sim$0.02 to 0.35$~GeV/c^{2}$ across the $5-35$~$GeV/c^{2}$ range considered for $10\times130$ and $10\times250$ events as shown in Figs.~\ref{fig:Q2_Res_10x130},~\ref{fig:Q2_Res_10x250} respectively. This is comfortably within the $1~GeV/c^{2}$ width of $Q^{2}$ bins that was chosen.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.475\textwidth]{Figures/10on130_Q2Res_2D_AllQ2.png}
+    \includegraphics[width=0.475\textwidth]{Figures/10on130_Q2Res_AllQ2.png}
+    \caption{(Left) $\Delta Q^{2} = Q^{2}_{MC} - Q^{2}_{DA}$ as a function of $Q^{2}_{MC}$ for $10\times130$ events. The RMS widths of these slices are plotted as a function of the bin centroid in $Q^{2}_{MC}$ in the (Right) figure. The $y$-axis can be interpreted as the resolution in $Q^{2}$.}
+\label{fig:Q2_Res_10x130}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.475\textwidth]{Figures/10on250_Q2Res_2D_AllQ2.png}
+    \includegraphics[width=0.475\textwidth]{Figures/10on250_Q2Res_AllQ2.png}
+    \caption{(Left) $\Delta Q^{2} = Q^{2}_{MC} - Q^{2}_{DA}$ as a function of $Q^{2}_{MC}$ for $10\times250$ events. The RMS widths of these slices are plotted as a function of the bin centroid in $Q^{2}_{MC}$ in the (Right) figure. The $y$-axis can be interpreted as the resolution in $Q^{2}$.}
+\label{fig:Q2_Res_10x250}
+\end{figure}
+
+For $-t$, the situation is slightly more complex. The $-t$ resolution ranges from $0.002--0.02~GeV^{2}$ for $10\times130$ in the $-t < 0.2~GeV^{2}$ range. For $10\times250$ , the corresponding resolution range is $0.01--0.025~GeV^{2}$ in the same range in $-t$. In both cases, the resolution increases with $-t$ as shown in Figs.~\ref{fig:t_Res_10x130},~\ref{fig:t_Res_10x250}. For the lowest 5 $-t$ bins that are used in the extraction of $F_{\pi}$, the resolution is smaller than the chosen $0.02~GeV^{2}$ bin width in the majority of cases. This situation also varies by $Q^{2}$ bin as discussed in Appendix.\ref{Appendix:tRes}. In higher $Q^{2}$ bins and for higher beam energy combinations, broader $-t$ bins may be needed in order to avoid a large bin migration correction as was the case at HERA.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.475\textwidth]{Figures/10on130_tRes_2D_AllQ2.png}
+    \includegraphics[width=0.475\textwidth]{Figures/10on130_tRes_AllQ2.png}
+    \caption{(Left) $\Delta t = t_{mc} - t_{eXBABE}$ as a function of $-t_{MC}$ for $10\times130$  events across all $Q^{2}_{DA}$ bins. One bin wide slices along the $x$-axis are taken from this figure. The RMS widths of these slices are plotted as a function of the bin centroid in $-t_{MC}$ in the (Right) figure. The $y$-axis can be interpreted as the resolution in $-t$.}
+\label{fig:t_Res_10x130}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.475\textwidth]{Figures/10on250_tRes_2D_AllQ2.png}
+    \includegraphics[width=0.475\textwidth]{Figures/10on250_tRes_AllQ2.png}
+    \caption{(Left) $\Delta t = t_{mc} - t_{eXBABE}$ as a function of $-t_{MC}$ for $10\times250$ events across all $Q^{2}_{DA}$ bins. One bin wide slices along the $x$-axis are taken from this figure. The RMS widths of these slices are plotted as a function of the bin centroid in $-t_{MC}$ in the (Right) figure. The $y$-axis can be interpreted as the resolution in $-t$.}
+\label{fig:t_Res_10x250}
+\end{figure}
+
+To maximize statistics, events were integrated over the full $W$ range covered by the data in the $(Q^2,t)$ bin. We have not yet tested whether additional binning in $W$ will be needed to constrain the additional theoretical uncertainties discussed in Sec. \ref{sec:sigL_isolation}.
+
+\subsection{Assumed systematic uncertainties on the cross section
+\label{sec:systematics}}
+
+The extraction of pion form factor information from the $p(e,e'\pi^+n)$ data set requires that the measured $d\sigma/dt$ have small systematic uncertainties in both their absolute normalization, and in their $(Q^2,W,t,\theta^*,\phi)$ kinematic placement.
+There are no previous measurements in the EIC kinematic region
+to use as a reference. The JLab Hall C $p(e,e'\pi^+)n$ data are taken with high resolution focusing magnetic spectrometers in a fixed target environment, which will yield very different systematics than ePIC. H1@HERA was unable to cleanly isolate the exclusive $\pi^+$ process, but did publish inclusive leading neutron $p(e,e'n)X$ data that was used to infer the pion structure function $F_1^{\pi}$ \cite{Aaron:2010ab}. HERMES@HERA published unseparated $p(e,e'\pi^+)n$ cross sections, where a missing mass cut $M_X^2<1.2$ GeV$^2$ selected an event sample dominated by exclusive events \cite{HERMES:2007hrc}. The systematic uncertainty for the number of exclusive events ranged from 5-20\% depending on the $t$-bin, with additional systematic uncertainties of $<15\%$ in the acceptance of the spectrometer, $<$25\%(35\%) in bin-migration out(in) of a given exclusive event bin, and 5\% in integrated luminosity normalization.
+%
+For this study, we assume cross-section systematic uncertainties of 2.5\% point-to-point and 12\% scale (similar to the H1@HERA pion structure function measurement \cite{Aaron:2010ab}).
+
+\subsection{Assumed systematic uncertainties coming from the $L/T$-separation
+\label{sec:sigL_isolation}
+}
+
+After the exclusive $p(e,e'\pi^+n)$ event sample is identified, the next step is to separate the longitudinal cross-section $d\sigma_L/dt$ from $d\sigma_T/dt$, needed for the extraction of the pion form factor. However, due to the lack of low $\epsilon$ data,
+a conventional Rosenbluth separation (Eqn. \ref{eqn:sepsig}) is impractical at the EIC. Fortunately, at the high $Q^2$ and $W$ accessible at the EIC, phenomenological models predict $\sigma_L\gg\sigma_T$ at small $-t$. This is expected, since in the hard scattering regime QCD scaling predicts $\sigma_L\propto Q^{-6}$ and $\sigma_T\propto Q^{-8}$, hence $\sigma_L$ is expected to dominate at sufficiently high $Q^2$. For example, the Vrancx and Ryckebusch (VR) Regge-based model \cite{Vrancx:2013fra} predicts $R=\sigma_L/\sigma_T >10$ for $Q^2>10$~GeV$^2$ and $-t<0.06$ GeV$^2$, and $R>25$ for $Q^2>25$~GeV$^2$ and $-t<0.10$~GeV$^2$. As shown in Fig. \ref{fig:VR_LT}, the transverse cross-section contributions are expected in these cases to be only 4-10\% of $\sigma_{uns}$. The most practical choice appears to be to use a model to isolate the dominant $d\sigma_L/dt$ from the measured $d\sigma_{uns}/dt$.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.65\textwidth]{Figures/VR_LT.png}
+    \caption{VR model \cite{Vrancx:2013fra} predictions for $R=\sigma_L/\sigma_T$ versus $t$ for kinematics typical of the EIC.  The curves range from $Q^2$=10 GeV$^2$ (lowest), $W$=7.0 GeV to $Q^2=$35 GeV$^2$, $W$=9.5 GeV (highest).  For all of these kinematics $\epsilon>0.995$.
+    }
+\label{fig:VR_LT}
+\end{figure}
+
+Since a model will be solely responsible for the subtraction of $\sigma_T$ from the experimental data to yield $\sigma_L$, it will be very important to confirm the validity of the model used. This can also be done with EIC data, using exclusive $^2H(e,e'\pi^+n)n$ and $^2H(e,e'\pi^-p)p$ data at the same kinematics as the primary $p(e,e'\pi^+n)$ measurement. The ratio of these cross sections is
+\begin{equation}
+R_{\pm}=\frac{\sigma[n(e,e'\pi^-p)]}{\sigma[p(e,e'\pi^+n)]}=\frac{|A_V-A_S|^2}{|A_V+A_S|^2}
+\end{equation}
+where $A_V$ is the isovector amplitude, and $A_S$ is the isoscalar amplitude.
+Since the pion pole $t$-channel process used for the determination of the pion form factor is purely isovector (due to $G$-parity conservation), the above ratio will be diluted if $\sigma_T$ is not small, or if there are significant non-pole contributions to $\sigma_L$. The comparison of the measured $\pi^-/\pi^+$ ratio to model expectations, therefore, provides an effective means of validating the model used to determine $\sigma_L$. The same model, now validated, can likely also be used to extract the pion form factor from the $\sigma_{uns}$ data.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.98\textwidth]{Figures/ratioL_pimpip.png}
+    \caption{VR model \cite{Vrancx:2013fra} predictions for $R_{\pm}$ versus $t$ for kinematics typical of the EIC. 
+    As expected the ratio is near unity at $-t_{min}$ and drops rapidly thereafter, due to the presence of non-pion-pole contributions to the cross-section. Comparisons of such ratios with experimental data will be essential for confirming the validity of the model used to infer $F_{\pi}(Q^2)$ from the experimental cross-sections.}
+\label{fig:VR_pipm}
+\end{figure}
+
+Fig. \ref{fig:VR_pipm} presents a prediction of such ratios using the VR Regge-model for typical EIC kinematics. We have not yet had an opportunity to simulate the $^2H(e,e'\pi^+n)n$, $^2H(e,e'\pi^-p)p$ processes for EIC early science running. We plan to do so once the personnel hired to work on the necessary extensions to the DEMPgen generator arrives in Canada. Demonstrating the feasibility of such measurements with ePIC are clearly essential for the EIC meson form factor program.
+
+Any published $F_{\pi}$ results from the EIC will need to assign a systematic uncertainty to the use of the model used to isolate $\sigma_L$ from the $d\sigma/dt$ data. In the actual EIC experiment, this uncertainty can be determined from the detailed comparison of model and $e+^2$H data for $R_{\pm}$ above. In the meantime, we have assumed an uncertainty of $\delta r=r=0.013-0.15$, where $r=1/R=\sigma_T/\sigma_L$. As seen in Fig. \ref{fig:VR_LT}, this uncertainty will be largest for $Q^2=$5-10 GeV$^2$, and much smaller for $Q^2>$20 GeV$^2$.
+
+\subsection{Projected $F_{\pi}$ uncertainties and kinematic reach
+\label{subsec:fpi_Proj}}
+
+Once triple-coincidence $p(e,e'\pi^+n)$ events are cleanly identified with ePIC, the value of $F_{\pi}(Q^2)$ is determined by comparing the measured $d\sigma_L/dt$ values at small $-t$ to the electroproduction models. Measurements over a range of $-t$ are an essential part of the model validation process, to confirm that the model is able to correctly reproduce not only the magnitude of the cross-section, but also its $t$-dependence. The JLab 6\,GeV experiments were instrumental in establishing the reliability of this technique up to $Q^2=2.45$~GeV$^2$~\cite{Huber:2008id, Horn:2016rip, Horn:2007ug, Volmer:2000ek, Horn:2006tm, Tadevosyan:2007yd, Blok:2008jy, Huber:2014ius, Huber:2014kar}, and extensive further tests are planned as part of JLab experiment E12-19-006 \cite{E12-19-006}.
+The JLab experiments had to estimate an additional uncertainty coming from the form factor extraction fit to the data. We do not assign any such uncertainty here, but the EIC should provide data over a sufficiently large kinematic range to allow the model dependence to be quantified in a detailed analysis.
+
+%\subsection{QA Plots}\label{subsec:QA}
+
+\begin{table}
+    \centering
+    \begin{tabular}{|r|r|c|ccc|}
+    \multicolumn{6}{c}{$\overline{Q^2}$=10.54 GeV$^2$, $\overline{W}$=8.76 GeV, $-t_{min}$=0.02 GeV$^2$}\\
+    \hline
+    $-t_{bin}$ & $r=T/L$ & $\frac{Counts}{t-\phi\ bin}$ & $\delta\sigma_{uns}$ & $\delta\sigma_{L\ (stat+uncorr)}$ & $\delta\sigma_{L\ (t-corr+scale)}$\\
+    \hline
+     0.03 &  7.5\% & 2180 & 3.29\% & 3.55\% & 13.88\%\\
+     0.05 &  8.8\% & 2710 & 3.15\% & 3.55\% & 14.45\%\\
+     0.07 & 10.0\% & 2380 & 3.23\% & 3.77\% & 15.06\%\\
+     0.09 & 12.6\% & 2180 & 3.29\% & 4.18\% & 16.41\%\\
+     0.11 & 15.2\% & 1520 & 3.58\% & 4.85\% & 17.84\%\\ \hline
+     \multicolumn{6}{|c|}{\small{$\delta F_{\pi}$ from 5 lowest $t$-bins: 1.74\% (stat+uncorr), 7.37\% (incl t-corr+scale)}} \\ 
+     \hline
+    \multicolumn{6}{c}{}\\
+    \multicolumn{6}{c}{$\overline{Q^2}$=26.49 GeV$^2$, $\overline{W}$=9.40 GeV, $-t_{min}$=0.07 GeV$^2$}\\
+    \hline
+    $-t_{bin}$ & $r=T/L$ & $\frac{Counts}{t-\phi\ bin}$ & $\delta\sigma_{uns}$ & $\delta\sigma_{L\ (stat+uncorr)}$ & $\delta\sigma_{L\ (t-corr+scale)}$\\
+    \hline
+     0.09 &  3.5\% &  356 & 5.86\% & 5.79\% & 12.47\%\\
+     0.11 &  4.4\% &  355 & 5.87\% & 5.82\% & 12.73\%\\
+     0.13 &  5.3\% &  327 & 6.07\% & 6.03\% & 13.03\%\\
+     0.15 &  6.4\% &  279 & 6.49\% & 6.48\% & 13.44\%\\
+     0.17 &  7.5\% &  231 & 7.03\% & 7.05\% & 13.90\%\\ \hline
+     \multicolumn{6}{|c|}{\small{$\delta F_{\pi}$ from 5 lowest $t$-bins: 2.77\% (stat+uncorr), 7.41\% (incl $t$-corr+scale)}} \\ \hline
+     
+    \end{tabular}
+    \caption{Detailed error calculation for two $Q^2$ points with $10\times 130$ beam energy combination. The estimated $r=T/L$ values are taken from the VR model \cite{Vrancx:2013fra}, and we take the uncertainty in the ratio as $\delta r=r$. The simulated number of experimental counts/bin are for an integrated luminosity of $5\times 10^{39}$/cm$^2$. The uncertainty in the unseparated cross section $\delta\sigma_{uns}$ includes both statistical and an estimated uncorrelated systematic uncertainty of 2.5\%, added in quadrature. The next column, $\delta\sigma_L$(stat+uncorr), propagates this uncertainty to $\sigma_L$ using Eqn. \ref{eqn:dsigL}. $\delta\sigma_L$(t-corr+scale) shows the non-statistical errors, including the assumed 12\% scale systematic uncertainty in the cross section measurement, also propagated from $\sigma_{uns}$ to $\sigma_L$. The uncertainty in the pion form factor is based on both of these errors, as described in the text. The first uncertainty corresponds to the inner error bar in Fig. \ref{fig:fpi_proj}, while the second uncertainty is the outer error bar.
+    \label{tab:stats}}
+\end{table}
+
+
+The assumed statistical and systematic uncertainties are given in Table \ref{tab:stats} for two $10\times 135$ $Q^2$-bins, one with good statistics, and the other with poorer statistics. These uncertainties include the assumed experiment systematics discussed in Sec. \ref{sec:systematics}, and the uncertainties from the use of a model to isolate $\sigma_L$ discussed in Sec. \ref{sec:sigL_isolation}. If we take $LT=TT=0$, we can invert Eqn. \ref{eqn:sepsig} to give $\sigma_L=\sigma_{uns}/(r+\epsilon)$, and
+\begin{equation}
+    \delta\sigma_L=\sqrt{
+    \biggl( \frac{\delta\sigma_{uns}}{r+\epsilon}\biggr)^2 + 
+    \biggl( \frac{\delta r}{r+\epsilon}\biggr)^2},
+    \label{eqn:dsigL}
+\end{equation}
+assuming the uncertainty in $\epsilon$ is small enough to be ignored.
+
+The propagation of these uncertainties to $F_{\pi}$ is as follows.  Since the Born term model of Actor, Korner and Bender
+\cite{act74} predicts the pion-pole contribution to $\sigma_L$ to be 
+\begin{equation}
+N \frac{d\sigma_L}{dt} = 4 \hbar c\ (e g_{\pi NN})^2\ 
+\frac{-t\ }{(t-m_{\pi}^2)^2}\ Q^2 F_{\pi}^2(Q^2),
+\label{eqn:chewlow}
+\end{equation}
+where $e^2/(4\pi\hbar c)=1/137$ and $N$ depends on the virtual photon flux factor,
+it is reasonable to assume $F_{\pi} \propto \sqrt{\sigma_L}$, $i.e.$ $\delta F_{\pi}=\delta\sigma_L/2$. The final $F_{\pi}$ uncertainties achieved in the JLab experiment \cite{Horn:2006tm} are best modelled by taking the geometric mean of the statistical and uncorrelated systematic errors of the lowest 5 $t$-bins used in the form factor extraction from $\sigma_L$ data, added in quadrature to the $t$-correlated and scale uncertainties of the lowest $-t$-bin. These give the final uncertainties in $F_{\pi}$ of about 7.4\% for both the low and high statistics $Q^2$-bins in Table \ref{tab:stats}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\textwidth]{Figures/fpi_epic_hiacc_25sep.png}
+    \caption{
+   Existing data (blue, black, yellow, green) and projected uncertainties for future data on the pion form factor from JLab (magenta) and ePIC (blue, orange), in comparison to a variety of hadronic structure models. The projected ePIC data have double error bars, where the inner error bar includes only statistical and assumed point-to-point systematic errors, and the outer error bar includes also the correlated systematic errors.
+    }
+\label{fig:fpi_proj}
+\end{figure}
+
+Projected uncertainties and kinematic reach of an early science pion form factor measurement are shown in Fig.~\ref{fig:fpi_proj}.
+Regarding the projected uncertainties, for the lowest $Q^2$ bins ($Q^2<10$~GeV$^2$) the uncertainty in $r$ is among the largest systematic uncertainties, arising the relatively less favorable $T/L$ ratio. At intermediate $Q^2$ ($10<Q^2<25$~GeV$^2$), the $r=T/L$ ratio is more favorable and the experimental systematic uncertainties dominate. The statistical uncertainties are largest for the $Q^2>$25~GeV$^2$ bins, as the rates there are much lower. The width of the highest $Q^2$ bins has been increased to allow a minimum threshold of $\sim$300 $e\pi^+n$ coincidences for the lowest 5 $t$-bins at each $Q^2$. This gives similar statistics to those obtained with the default $\Delta Q^2=1$ GeV$^2$ binning at intermediate $Q^2$. It is difficult to know at this stage whether this wider $Q^2$-binning will introduce additional systematic uncertainties elsewhere in the form factor extraction.
+
+It is clear that with these assumptions, the pion form factor projections in Fig.~\ref{fig:fpi_proj} are systematics limited over the full kinematic range. If additional $W$ binning is required (as mentioned in Sec. \ref{sec:statistics}), the statistical limitations of the data will be more pronounced. The projections stop at $Q^2=35$ GeV$^2$ due to the limitations of DEMPgen. When we started working on the generator, we did not anticipate the possibility of acquiring significant EIC data above $Q^2>35$ GeV$^2$. Given that this may be possible, we plan to extend DEMPgen to at least $Q^2$=50 GeV$^2$ in the future.
+
+\subsection{Conclusion}
+
+To conclude, the extraction of the pion form factor to high $Q^2$ with ePIC depends on very good ZDC angular resolution for two reasons: 1) the necessity to separate the small exclusive $\pi^+$ cross-section from dominant inclusive backgrounds via $\Delta\theta^*$ and $\Delta\phi^*$ cuts, 2) the need to reconstruct $t$ to better than $\sim$0.02~GeV$^2$, such resolution is only possible when reconstructed from the initial proton and final neutron momenta. The performance of the ePIC far forward detectors is thus of crucial importance to the feasibility of a pion form factor measurement.
+
+\section{Acknowledgments}
+
+This work is supported by the Natural Sciences and Engineering Research Council of Canada (NSERC) grants SAPIN-2021-00026 and SAPPJ-2025-00040, and the UK Research and Innovation Science and Technology Facilities Council (STFC).
+
+%\pagebreak
 \appendix
-\section{Appendix}
+\section{-t Resolutions}
 \input{Appendix}
 
+\clearpage
 \bibliographystyle{elsarticle-num} 
 \bibliography{bibliography.bib}
 
